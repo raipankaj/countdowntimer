@@ -84,5 +84,9 @@ fun ExerciseTimer() {
 }
 ```
 
+![Demo](https://github.com/raipankaj/countdowntimer/blob/main/countdown.gif)
+<br>
+Action with two duration - 10 seconds, inhale and 10 seconds, exhale
+
 <h1>License</h1>
 This library is licensed under the MIT License. See the LICENSE file for details.
