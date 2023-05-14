@@ -7,11 +7,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.alltechies.countdown.ui.theme.CountdownTheme
 import com.alltechies.timer.CountDownTimer
@@ -30,7 +28,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-                    Box(modifier = Modifier.fillMaxSize()) {
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         CountDownTimer(
                             actionList = listOf(
                                 Action(45.seconds.inWholeMilliseconds, "Inhale"),
@@ -40,7 +38,7 @@ class MainActivity : ComponentActivity() {
                                 Action(45.seconds.inWholeMilliseconds, "Inhale"),
                                 Action(30.seconds.inWholeMilliseconds, "Exhale"),
                             ),
-                            dialerSize = 200.dp,
+                            dialerSize = 240.dp,
                             dialerBackgroundColor = MaterialTheme.colorScheme.primary,
                             dialerProgressColor = Color.White,
                             dialerBorderColor = MaterialTheme.colorScheme.tertiary,
@@ -52,21 +50,5 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CountdownTheme {
-        Greeting("Android")
     }
 }
